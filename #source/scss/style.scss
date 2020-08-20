@@ -241,13 +241,6 @@ body {
 			line-height: 24px;
 			padding: 0 0 0 30px;
 			background: url(/img/2/leaf-2.png) 0 5px / 25px auto no-repeat;
-			// &:before {
-			// 	content: url(/img/2/leaf-3.png);
-			// 	position: absolute;
-			// 	left: 0;
-			// 	width: 15px;
-			// 	height: auto;
-			// }
 		}
 	}
 	&__image {
@@ -323,16 +316,72 @@ body {
 	// .request__title
 	&__title {
 	}
+	// .request__row
+	&__row {
+		@include flexbox;
+	}
 	// .request__text
 	&__text {
+		flex: 1 0 50%;
+		padding: 30px 20px 20px 60px;
 	}
 	// .request__list
 	&__list {
 	}
+	// .request__image
+	&__image {
+		flex: 1 0 50%;
+	}
 }
+
 .reguest-list {
 	// .reguest-list__item
 	&__item {
+		position: relative;
+		margin: 0 0 20px;
+		font-size: 18px;
+		line-height: 24px;
+		padding: 0 0 0 30px;
+		background: url(/img/2/leaf-2.png) 0 5px / 25px auto no-repeat;
+	}
+}
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+.price {
+	padding: 100px 0 50px;
+	// .price__body
+	&__body {
+	}
+	// .price__title
+	&__title {
+	}
+	// .price__row
+	&__row {
+		@include flexbox;
+	}
+	// .price__text
+	&__text {
+		flex: 1 0 50%;
+		font-size: 20px;
+		line-height: 26px;
+		padding: 0 20px 20px 0;
+		p {
+			margin: 0 0 30px;
+		}
+	}
+	&__true {
+		color: $green1;
+	}
+	&__false {
+		color: red;
+		text-decoration: line-through;
+	}
+	// .price__link
+	&__link {
+	}
+	// .price__image
+	&__image {
+		flex: 1 1 50%;
 	}
 }
 

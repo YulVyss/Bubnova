@@ -998,6 +998,9 @@ body.ie .ibg img {
 	color: #ffffff;
 	padding: 30px 0;
 }
+.footer a {
+	color: #000;
+}
 .footer__row {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1006,11 +1009,51 @@ body.ie .ibg img {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	font-size: 16px;
+	line-height: 18px;
+	color: #000;
 }
 .footer__logo {
 	color: rgba(178, 188, 47, 0.6);
 	background-color: #ffffff;
 }
+.footer__list li {
+	font-size: 16px;
+	line-height: 20px;
+}
+.footer__contacts a {
+	display: block;
+}
+.footer__socials {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 0;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.footer__socials a {
+	display: block;
+	width: 20px;
+	height: 20px;
+}
+.footer__socials_ins {
+	background: url(/img/icons/inst.png) center/contain no-repeat;
+}
+.footer__socials_vk {
+	background: url(/img/icons/vk.png) center/contain no-repeat;
+}
+.footer__socials_f {
+	background: url(/img/icons/f.png) center/contain no-repeat;
+}
+
 .link {
 	display: inline-block;
 	font-size: 22px;
@@ -1227,4 +1270,63 @@ body.ie .ibg img {
 
 .request {
 	padding: 100px 0 50px;
+}
+.request__row {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 0;
+}
+.request__text {
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 0 50%;
+	        flex: 1 0 50%;
+	padding: 30px 20px 20px 60px;
+}
+.request__image {
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 0 50%;
+	        flex: 1 0 50%;
+}
+
+.reguest-list__item {
+	position: relative;
+	margin: 0 0 20px;
+	font-size: 18px;
+	line-height: 24px;
+	padding: 0 0 0 30px;
+	background: url(/img/2/leaf-2.png) 0 5px/25px auto no-repeat;
+}
+
+.price {
+	padding: 100px 0 50px;
+}
+.price__row {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 0;
+}
+.price__text {
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 0 50%;
+	        flex: 1 0 50%;
+	font-size: 20px;
+	line-height: 26px;
+	padding: 0 20px 20px 0;
+}
+.price__text p {
+	margin: 0 0 30px;
+}
+.price__true {
+	color: #97a300;
+}
+.price__false {
+	color: red;
+	text-decoration: line-through;
+}
+.price__image {
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 1 50%;
+	        flex: 1 1 50%;
 }

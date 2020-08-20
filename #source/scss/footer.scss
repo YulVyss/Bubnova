@@ -3,10 +3,17 @@
   flex: 0 0 100px;
   color: #ffffff;
   padding: 30px 0;
+  a {
+    color: #000;
+  }
   // .footer__row
   &__row {
     @include flexbox;
     align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 18px;
+    color: #000;
   }
   // .footer__column
   &__column {
@@ -24,9 +31,39 @@
   }
   // .footer__list
   &__list {
+    li {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  &__contacts {
+  }
+  &__links {
   }
   // .footer__link
   &__link {
+  }
+  &__contacts a {
+    display: block;
+  }
+  &__socials {
+    @include flexbox;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+    &_ins {
+      background: url(/img/icons/inst.png) center / contain no-repeat;
+    }
+    &_vk {
+      background: url(/img/icons/vk.png) center / contain no-repeat;
+    }
+    &_f {
+      background: url(/img/icons/f.png) center / contain no-repeat;
+    }
   }
 }
 
