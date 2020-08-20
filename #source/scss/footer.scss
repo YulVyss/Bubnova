@@ -25,6 +25,10 @@
   }
   // .footer__phone
   &__phone {
+    margin: 0 0 20px;
+  }
+  &__mail {
+    margin: 0 0 20px;
   }
   // .footer__menu
   &__menu {
@@ -42,6 +46,7 @@
   }
   // .footer__link
   &__link {
+    margin: 0 0 15px;
   }
   &__contacts a {
     display: block;
@@ -49,20 +54,21 @@
   &__socials {
     @include flexbox;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     a {
       display: block;
       width: 20px;
       height: 20px;
+      margin: 0 10px 0 0;
     }
     &_ins {
-      background: url(img/icons/inst.png) center / contain no-repeat;
+      background: url(/img/icons/inst.png) center / contain no-repeat;
     }
     &_vk {
-      background: url(img/icons/vk.png) center / contain no-repeat;
+      background: url(/img/icons/vk.png) center / contain no-repeat;
     }
     &_f {
-      background: url(img/icons/f.png) center / contain no-repeat;
+      background: url(/img/icons/f.png) center / contain no-repeat;
     }
   }
 }

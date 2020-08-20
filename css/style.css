@@ -1020,9 +1020,18 @@ body.ie .ibg img {
 	color: rgba(178, 188, 47, 0.6);
 	background-color: #ffffff;
 }
+.footer__phone {
+	margin: 0 0 20px;
+}
+.footer__mail {
+	margin: 0 0 20px;
+}
 .footer__list li {
 	font-size: 16px;
 	line-height: 20px;
+}
+.footer__link {
+	margin: 0 0 15px;
 }
 .footer__contacts a {
 	display: block;
@@ -1035,23 +1044,24 @@ body.ie .ibg img {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
 }
 .footer__socials a {
 	display: block;
 	width: 20px;
 	height: 20px;
+	margin: 0 10px 0 0;
 }
 .footer__socials_ins {
-	background: url(img/icons/inst.png) center/contain no-repeat;
+	background: url(/img/icons/inst.png) center/contain no-repeat;
 }
 .footer__socials_vk {
-	background: url(img/icons/vk.png) center/contain no-repeat;
+	background: url(/img/icons/vk.png) center/contain no-repeat;
 }
 .footer__socials_f {
-	background: url(img/icons/f.png) center/contain no-repeat;
+	background: url(/img/icons/f.png) center/contain no-repeat;
 }
 
 .link {
@@ -1066,7 +1076,7 @@ body.ie .ibg img {
 	font-family: "Lato", sans-serif;
 }
 .link:after {
-	content: url("img/icons/p-right.svg");
+	content: url("/img/icons/p-right.svg");
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -1091,7 +1101,7 @@ body.ie .ibg img {
 
 .fullscreen {
 	min-height: 100vh;
-	background: url("img/1/bg2.png") 0 0 repeat;
+	background: url("/img/1/bg2.png") 0 0 repeat;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1204,7 +1214,7 @@ body.ie .ibg img {
 	font-size: 18px;
 	line-height: 24px;
 	padding: 0 0 0 30px;
-	background: url(img/2/leaf-2.png) 0 5px/25px auto no-repeat;
+	background: url(/img/2/leaf-2.png) 0 5px/25px auto no-repeat;
 }
 .about__image {
 	-webkit-box-flex: 0;
@@ -1215,7 +1225,7 @@ body.ie .ibg img {
 
 .help {
 	padding: 100px 0 50px;
-	background: url("img/1/bg2.png") 0 0 repeat;
+	background: url("/img/1/bg2.png") 0 0 repeat;
 }
 .help__list {
 	display: -webkit-box;
@@ -1295,7 +1305,7 @@ body.ie .ibg img {
 	font-size: 18px;
 	line-height: 24px;
 	padding: 0 0 0 30px;
-	background: url(img/2/leaf-2.png) 0 5px/25px auto no-repeat;
+	background: url(/img/2/leaf-2.png) 0 5px/25px auto no-repeat;
 }
 
 .price {
