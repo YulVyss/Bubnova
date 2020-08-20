@@ -106,7 +106,7 @@ body {
 	padding: 0 50px 0 0;
 	font-family: $fontfamilyAdd;
 	&:after {
-		content: url("/img/icons/p-right.svg");
+		content: url("img/icons/p-right.svg");
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -131,7 +131,7 @@ body {
 .fullscreen {
 	min-height: 100vh;
 	// background-color: $beg3;
-	background: url("/img/1/bg2.png") 0 0 repeat;
+	background: url("img/1/bg2.png") 0 0 repeat;
 	display: flex;
 	align-items: center;
 	// .fullscreen__body
@@ -240,7 +240,7 @@ body {
 			font-size: 18px;
 			line-height: 24px;
 			padding: 0 0 0 30px;
-			background: url(/img/2/leaf-2.png) 0 5px / 25px auto no-repeat;
+			background: url(img/2/leaf-2.png) 0 5px / 25px auto no-repeat;
 		}
 	}
 	&__image {
@@ -257,7 +257,7 @@ body {
 //====================================================================================================
 .help {
 	padding: 100px 0 50px;
-	background: url("/img/1/bg2.png") 0 0 repeat;
+	background: url("img/1/bg2.png") 0 0 repeat;
 	// .help__body
 	&__body {
 	}
@@ -342,7 +342,7 @@ body {
 		font-size: 18px;
 		line-height: 24px;
 		padding: 0 0 0 30px;
-		background: url(/img/2/leaf-2.png) 0 5px / 25px auto no-repeat;
+		background: url(img/2/leaf-2.png) 0 5px / 25px auto no-repeat;
 	}
 }
 

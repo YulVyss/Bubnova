@@ -1045,13 +1045,13 @@ body.ie .ibg img {
 	height: 20px;
 }
 .footer__socials_ins {
-	background: url(/img/icons/inst.png) center/contain no-repeat;
+	background: url(img/icons/inst.png) center/contain no-repeat;
 }
 .footer__socials_vk {
-	background: url(/img/icons/vk.png) center/contain no-repeat;
+	background: url(img/icons/vk.png) center/contain no-repeat;
 }
 .footer__socials_f {
-	background: url(/img/icons/f.png) center/contain no-repeat;
+	background: url(img/icons/f.png) center/contain no-repeat;
 }
 
 .link {
@@ -1066,7 +1066,7 @@ body.ie .ibg img {
 	font-family: "Lato", sans-serif;
 }
 .link:after {
-	content: url("/img/icons/p-right.svg");
+	content: url("img/icons/p-right.svg");
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -1091,7 +1091,7 @@ body.ie .ibg img {
 
 .fullscreen {
 	min-height: 100vh;
-	background: url("/img/1/bg2.png") 0 0 repeat;
+	background: url("img/1/bg2.png") 0 0 repeat;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1204,7 +1204,7 @@ body.ie .ibg img {
 	font-size: 18px;
 	line-height: 24px;
 	padding: 0 0 0 30px;
-	background: url(/img/2/leaf-2.png) 0 5px/25px auto no-repeat;
+	background: url(img/2/leaf-2.png) 0 5px/25px auto no-repeat;
 }
 .about__image {
 	-webkit-box-flex: 0;
@@ -1215,7 +1215,7 @@ body.ie .ibg img {
 
 .help {
 	padding: 100px 0 50px;
-	background: url("/img/1/bg2.png") 0 0 repeat;
+	background: url("img/1/bg2.png") 0 0 repeat;
 }
 .help__list {
 	display: -webkit-box;
@@ -1295,7 +1295,7 @@ body.ie .ibg img {
 	font-size: 18px;
 	line-height: 24px;
 	padding: 0 0 0 30px;
-	background: url(/img/2/leaf-2.png) 0 5px/25px auto no-repeat;
+	background: url(img/2/leaf-2.png) 0 5px/25px auto no-repeat;
 }
 
 .price {
