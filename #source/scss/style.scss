@@ -119,6 +119,7 @@ body {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	margin: 0 0 50px;
+	text-align: center;
 }
 .logo {
 	display: inline-block;
@@ -216,95 +217,112 @@ body {
 }
 
 //====================================================================================================
-.about {
-	padding: 100px 0 50px;
-	// .about__body
+.block {
+	padding: 50px 0 50px;
+	border-bottom: 1px solid $braun;
+	// .block__body
 	&__body {
-	}
-	&__row {
+		position: relative;
+		background: url(/img/icons/icon2.png) top / 7% no-repeat;
 		@include flexbox;
+		align-items: flex-start;
+		margin: 0 -20px;
+		padding: 100px 0 0;
+		// &:before {
+		// 	content: "";
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	width: 3px;
+		// 	height: 100px;
+		// 	background-color: $braun;
+		// }
 	}
-	// .about__title
+	// .block__column
+	&__column {
+		flex: 0 0 50%;
+		padding: 0 20px;
+	}
+	// .block__title
 	&__title {
+		margin: 20px 0 15px;
 	}
-	// .about__text
-	&__text {
-		flex: 1 1 50%;
-		padding: 0 10px 0 0;
-	}
-	// .about__list
+	// .block__list
 	&__list {
+		list-style: none;
 		li {
-			position: relative;
+			font-size: 16px;
+			line-height: 20px;
 			margin: 0 0 20px;
-			font-size: 18px;
-			line-height: 24px;
 			padding: 0 0 0 30px;
-			background: url(/img/2/leaf-2.png) 0 5px / 25px auto no-repeat;
+			background: url(/img/icons/tick.svg) 0 0 / 20px no-repeat;
 		}
 	}
-	&__image {
-		flex: 0 0 50%;
-		padding: 0 0 35%;
+
+	&__column:nth-child(2) &__list li {
+		background: url(/img/icons/tick_green.svg) 0 0 / 20px no-repeat;
 	}
 }
-
-.about-list {
-	// .about-list__item
+.block-list {
+	// .block-list__item
 	&__item {
 	}
 }
 //====================================================================================================
-.help {
-	padding: 100px 0 50px;
+.block:nth-child(1) {
+	.block__body {
+		background: url(/img/icons/icon3.png) top / 7% no-repeat;
+	}
+}
+.block:nth-child(2) {
+	.block__body {
+		background: url(/img/icons/icon2.png) top / 7% no-repeat;
+	}
+}
+.block:nth-child(3) {
+	.block__body {
+		background: url(/img/icons/icon3.png) top / 7% no-repeat;
+	}
+}
+.block:nth-child(4) {
+	.block__body {
+		background: url(/img/icons/icon4.png) top / 7% no-repeat;
+	}
+}
+.block:last-of-type {
+	border-bottom-style: none;
+}
+//====================================================================================================
+.add {
+	padding: 50px 0 50px;
 	background: url("/img/1/bg2.png") 0 0 repeat;
-	// .help__body
+	border-top: 1px solid $green2;
+	border-bottom: 1px solid $green2;
+	// .add__body
 	&__body {
 	}
-	// .help__title
-	&__title {
-	}
-	// .help__text
 	&__text {
-	}
-	// .help__list
-	&__list {
-		@include flexbox;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-}
-.help-list {
-	// .help-list__item
-	&__item {
-		flex: 0 0 33.33%;
-		position: relative;
-		@include flexbox;
-		flex-direction: column;
-		padding: 0 30px 20px;
-	}
-	// .help-list__icon
-	&__icon {
-		flex: 1 0 50%;
-		position: relative;
-		min-height: 200px;
-		overflow: hidden;
-		margin: 0 0 30px;
-		img {
-			display: block;
-			margin: 0 auto;
-			max-width: 200px;
-			max-height: 200px;
+		font-size: 20px;
+		line-height: 28px;
+		font-weight: 700;
+		text-align: center;
+		color: $braun;
+		p {
+			margin: 0 0 13px;
 		}
 	}
-	// .help-list__title
-	&__title {
-		flex: 0 1 50%;
-		font-size: 16px;
-		line-height: 24px;
-		color: $braun;
+	&__list {
+		li {
+			margin: 0 0 15px;
+			background: url(/img/icons/heart.png) 0 0 / 20px no-repeat;
+			text-align: left;
+			padding: 0 0 0 30px;
+		}
 	}
 }
+
+//====================================================================================================
+//====================================================================================================
 
 //====================================================================================================
 
@@ -318,19 +336,20 @@ body {
 	}
 	// .request__row
 	&__row {
-		@include flexbox;
 	}
 	// .request__text
 	&__text {
-		flex: 1 0 50%;
+		@include flexbox;
+		// flex: 1 0 50%;
 		padding: 30px 20px 20px 60px;
 	}
 	// .request__list
 	&__list {
+		flex: 0 1 50%;
 	}
 	// .request__image
 	&__image {
-		flex: 1 0 50%;
+		// flex: 1 0 50%;
 	}
 }
 
@@ -342,22 +361,22 @@ body {
 		font-size: 18px;
 		line-height: 24px;
 		padding: 0 0 0 30px;
-		background: url(/img/2/leaf-2.png) 0 5px / 25px auto no-repeat;
+		background: url(/img/icons/tick_green.svg) 0 0 / 25px auto no-repeat;
 	}
 }
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 .price {
-	padding: 100px 0 50px;
+	padding: 50px 0 50px;
 	// .price__body
 	&__body {
 	}
 	// .price__title
 	&__title {
 	}
-	// .price__row
-	&__row {
-		@include flexbox;
+	&__subtitle {
+		text-decoration: underline;
+		font-weight: 700;
 	}
 	// .price__text
 	&__text {
@@ -381,8 +400,71 @@ body {
 	}
 	// .price__image
 	&__image {
+		margin: -50px 0 30px;
 		flex: 1 1 50%;
+		padding: 0 0 50%;
 	}
 }
 
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+.answers {
+	padding: 100px 0 50px;
+	// .answers__body
+	&__body {
+	}
+	// .answers__title
+	&__title {
+	}
+	// .answers__row
+	&__row {
+		@include flexbox;
+	}
+	// .answers__text
+	&__text {
+		flex: 0 1 50%;
+		padding: 0 30px 0 0;
+	}
+	// .answers__list
+	&__list {
+		li {
+			position: relative;
+			font-size: 16px;
+			line-height: 20px;
+			margin: 0 0 15px;
+		}
+	}
+	// .answers__question
+	&__question {
+		margin: 0 0 13px;
+		padding: 0 10px 0 10px;
+		text-align: center;
+		&:before,
+		&:after {
+			position: absolute;
+			top: 0;
+		}
+		&:before {
+			position: absolute;
+			content: "«";
+			left: 0;
+		}
+		&:after {
+			position: absolute;
+			content: "»";
+			right: 0;
+		}
+	}
+	// .answers__answer
+	&__answer {
+		font-style: italic;
+		font-weight: 300;
+	}
+	// .answers__image
+	&__image {
+		flex: 0 1 50%;
+		padding: 0 0 30%;
+	}
+}
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+//</ОСНОВНОЙ БЛОК>====================================================================================================
 //</ОСНОВНОЙ БЛОК>====================================================================================================
