@@ -1,21 +1,28 @@
 //SLIDERS
-if($('.mainslider').length>0){
+if ($('.mainslider').length > 0) {
 	$('.mainslider').slick({
 		//autoplay: true,
 		//infinite: false,
 		dots: true,
-		arrows: false,
-		accessibility:false,
-		slidesToShow:1,
+		arrows: true,
+		accessibility: false,
+		slidesToShow: 1,
 		autoplaySpeed: 3000,
+		easing: 'ease',
+		autoplay: false,
+		pausOnHover: true,
+		pauseOnDotsHover: true,
+		pauseOnFocus: true,
+		draggable: true, //перетаскивание на десктопе
+		swipe: true, //перетаскивание на мобильном
 		//asNavFor:'',
 		//appendDots:
 		//appendArrows:$('.mainslider-arrows .container'),
-		nextArrow:'<button type="button" class="slick-next"></button>',
-		prevArrow:'<button type="button" class="slick-prev"></button>',
+		nextArrow: '<button type="button" class="slick-next"></button>',
+		prevArrow: '<button type="button" class="slick-prev"></button>',
 		responsive: [{
 			breakpoint: 768,
-			settings: {}
+			settings: { arrows: false, }
 		}]
 	});
 }
@@ -43,7 +50,7 @@ if($('.reviews-object__items').length>0){
 			},{
 				breakpoint: 768,
 				settings: {
-					
+
 				}
 			}]
 		});
@@ -113,7 +120,7 @@ if($('.newsmodule-slider').length>0){
 		$('.newsmodule-slider').slick('goTo',$(this).index());
 	});
 	$('.newsmodule-navigator-info span').eq(1).html($('.newsmodule-items-item').length);
-	
+
 	$('.newsmodule-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
 		$('.newsmodule-navigator-info span').eq(0).html(nextSlide+1);
 	});

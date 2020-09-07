@@ -194,6 +194,7 @@ body.ie {
 	}
 	.slick-track {
 		position: relative;
+		background: #f9f1e4;
 		width: 100%;
 		@include flexbox();
 	}
@@ -201,17 +202,45 @@ body.ie {
 		position: relative;
 	}
 	.slick-arrow {
+		position: absolute;
+		top: 40%;
+		width: 54px;
+		background: transparent;
+		border-top: 1px solid #000;
+		height: 54px;
+		z-index: 2;
 		&.slick-prev {
+			left: 10px;
+			transform: rotate(-45deg);
+			border-left: 1px solid #000;
 		}
 		&.slick-next {
+			right: 10px;
+			transform: rotate(45deg);
+			border-right: 1px solid #000;
+		}
+		@media (max-width: $md1+px) {
+			width: 34px;
+			height: 34px;
 		}
 	}
 	.slick-dots {
+		@include flexbox;
+		margin: 20px auto;
+		justify-content: center;
 		li {
 			button {
+				width: 20px;
+				height: 20px;
+				background: transparent;
+				border: 3px solid #594740;
+				border-radius: 50%;
+				margin: 0 20px 20px 0;
+				font-size: 0;
 			}
 			&.slick-active {
 				button {
+					background: #594740;
 				}
 			}
 		}
