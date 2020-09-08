@@ -1,8 +1,177 @@
+.call {
+  position: relative;
+  z-index: 2;
+  // .call__title
+  &__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #421a01;
+    margin: 0 0 30px;
+  }
+  // .call__body
+  &__body {
+    @include flexbox;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  // .call__popup
+  &__popup {
+  }
+  // .call__phone
+  &__phone,
+  &__email {
+    letter-spacing: -0.015em;
+    color: #421a01;
+    margin-left: 50px;
+    p {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      margin: 0 0 20px;
+    }
+    a {
+      color: #421a01;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  // .call__email
+
+  @media (max-width: $md1+px) {
+    &__title {
+      font-size: 36px;
+      line-height: 42px;
+    }
+    &__phone,
+    &__email {
+      letter-spacing: -0.015em;
+      color: #421a01;
+      margin-left: 30px;
+      p {
+        font-size: 20px;
+        line-height: 23px;
+        margin: 0 0 20px;
+      }
+      a {
+        color: #421a01;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+  @media (max-width: $md3+px) {
+    &__title {
+      font-size: 24px;
+      line-height: 28px;
+    }
+    &__body {
+      flex-direction: column;
+    }
+    &__phone,
+    &__email {
+      margin: 20px 0 0 30px;
+      color: #fff;
+      p {
+        font-size: 18px;
+        line-height: 21px;
+        margin: 0 0 10px;
+      }
+      a {
+        color: #fff;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+}
+.popup-call {
+  padding: 35px 30px 40px;
+  width: 380px;
+  height: 410px;
+  background: #ffffff;
+  box-shadow: 0px 4px 16px 7px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  // .popup-call__body
+  &__body {
+  }
+  // .popup-call__title
+  &__title {
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #421a01;
+    margin: 0 0 30px;
+  }
+  // .popup-call__input
+  &__input {
+    width: 100%;
+    height: 63px;
+    margin: 0 0 20px;
+    box-shadow: inset 0px 3px 10px rgba(199, 199, 199, 0.25);
+    border-radius: 5px;
+    padding: 0 0 0 40px;
+    font-size: 14px;
+    line-height: 28px;
+  }
+  input[type="text"] {
+    background: url(../img/popup/name.png) 10px no-repeat, #f8f8f8;
+  }
+  input[type="tel"] {
+    background: url(../img/popup/phone.png) 10px no-repeat, #f8f8f8;
+  }
+  // .popup-call__submit
+  &__submit {
+    // margin: 0 0 30px;
+    height: 66px;
+    width: 100%;
+    background: #ee6916;
+    box-shadow: 0px 4px 0px #b68500;
+    border-radius: 5px 5px 10px 10px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 27px;
+  }
+  @media (max-width: $md1+px) {
+    width: 321.11px;
+    height: 359.35px;
+    padding: 25px 17px 30px;
+    &__title {
+      font-size: 16px;
+    }
+    &__input {
+      height: 55.35px;
+      padding: 0 0 0 30px;
+    }
+    &__submit {
+      height: 57.99px;
+    }
+  }
+  @media (max-width: $md3+px) {
+    width: 253px;
+    height: 387px;
+    padding: 25px 17px 30px;
+    &__title {
+      font-size: 15px;
+      line-height: 140%;
+    }
+    &__input {
+      height: 63px;
+      padding: 0 0 0 35px;
+    }
+    &__submit {
+      height: 53px;
+      font-size: 10px;
+      line-height: 28px;
+    }
+  }
+}
+
 .footer {
   flex: 0 0 100px;
   padding: 30px 0 100px;
   background: #594740;
-  margin: -215px 0 0;
+  margin: -280px 0 0;
   // .footer__row
   &__row {
     @include flexbox;
@@ -76,6 +245,66 @@
       line-height: 18px;
       text-decoration-line: underline;
       color: #ffffff;
+    }
+  }
+  @media (max-width: $md1+px) {
+    &__links {
+      margin: 0 50px 0 0;
+      p {
+        font-size: 20px;
+        line-height: 23px;
+        margin: 0 0 20px;
+      }
+    }
+    &__address {
+      margin: 0 100px 0 0;
+      p {
+        font-size: 20px;
+        line-height: 23px;
+        margin: 0 0 20px;
+      }
+    }
+  }
+  @media (max-width: $md3+px) {
+    padding: 420px 0 20px;
+    background: #594740;
+    margin: -400px 0 0;
+    &__links {
+      margin: 0 0 0 30px;
+      p {
+        font-size: 20px;
+        line-height: 23px;
+        margin: 0 0 10px;
+      }
+    }
+    &__address {
+      margin: 0 0 0 30px;
+      p {
+        font-size: 18px;
+        line-height: 21px;
+        margin: 0 0 10px;
+      }
+    }
+    &__text a {
+      font-size: 15px;
+      line-height: 18px;
+    }
+    &__row {
+      justify-content: flex-start;
+      margin: 0 0 40px;
+    }
+    address {
+      font-size: 15px;
+      line-height: 18px;
+      letter-spacing: -0.015em;
+      color: #f9f1e4;
+    }
+    &__text {
+      text-align-last: center;
+      a {
+        font-size: 13px;
+        line-height: 18px;
+      }
     }
   }
 }
