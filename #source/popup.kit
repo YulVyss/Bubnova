@@ -1,35 +1,32 @@
-<div class="popup" id="popup_1">
+<div class="popup " id="popup_1">
 	<div class="popup-table table">
 		<div class="cell">
 			<div class="popup-content">
-				<div class="popup-close"></div>
-				<div class="popup__title">Оставьте заявку, и отвеу Вам в ближайшее время</div>
+				<div class="popup-close">X</div>
+				<div class="popup__title"></div>
 				<div class="popup__txt"></div>
-				<form action="#" class="popup-form form">
-					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="name" placeholder="Ваше имя"
-							class="input" />
-					</div>
-					<div class="form-input">
-						<input autocomplete="off" type="tel" name="form[]" data-value="tel" placeholder="Ваш телефон"
-							class="input req email" />
-					</div>
-					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req" />
-					</div>
-					<div class="form-button">
-						<button type="submit" class="form__btn btn fw"></button>
+				<form action="#" class="popup-form form call__popup popup-call">
+					<div class="popup-call__body">
+						<h3 class="popup-call__title">Можете просто оставить заявку, я отвечу Вам в ближайшее время</h3>
+						<p class="form-input"><input type="text" autocomplete="off" class="popup-call__input" placeholder="Ваше имя"
+								name="name" tabindex="1"></p>
+						<p class="form-input"><input type="tel" class="popup-call__input" placeholder="Ваш телефон" name="tel"
+								tabindex="2"></p>
+						<textarea class="popup__textarea" name="text" id="form_text"
+							placeholder="Дополнительная информация"></textarea>
+						<p><button type="submit" class="form__btn btn fw popup-call__submit" tabindex="4">Записаться</button>
+						</p>
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
 </div>
-<div class="popup popup-video">
+<!-- <div class="popup popup-video">
 	<div class="popup-table table">
 		<div class="cell">
 			<div class="popup-close"></div>
 			<div class="popup-video__value video"></div>
 		</div>
 	</div>
-</div>
+</div> -->

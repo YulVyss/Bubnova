@@ -49,7 +49,7 @@ $('.pl').click(function (event) {
 	return false;
 });
 function popupOpen(pl, v) {
-	$('.popup').removeClass('active').hide();
+	$('.popup').addClass('active');
 	if (!$('.menu__body').hasClass('active')) {
 		//$('body').data('scroll',$(window).scrollTop());
 	}
