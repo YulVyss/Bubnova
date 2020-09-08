@@ -190,7 +190,7 @@ body {
 			color: #211b19;
 			padding: 0 0 0 40px;
 			margin: 0 0 20px;
-			background: url(/img/icons/tick__1.png) 0 0 / 28px no-repeat;
+			background: url(../img/icons/tick__1.png) 0 0 / 28px no-repeat;
 			&:last-child {
 				margin: 0;
 			}
@@ -246,7 +246,7 @@ body {
 				line-height: 22px;
 				margin: 0 0 12px;
 				padding: 0 0 0 30px;
-				background: url(/img/icons/tick__1.png) 0 0 / 20px no-repeat;
+				background: url(../img/icons/tick__1.png) 0 0 / 20px no-repeat;
 				&:last-child {
 					margin: 0;
 				}
@@ -450,10 +450,10 @@ body {
 			box-shadow: -8px 8px 8px #c3c0bb;
 			z-index: 2;
 			.problem-list__item {
-				background: url(/img/if/problem-list_o.png) 0 0 /18.28px no-repeat;
+				background: url(../img/if/problem-list_o.png) 0 0 /18.28px no-repeat;
 			}
 			.positive-list__item {
-				background: url(/img/if/positive-list_o.png) 0 0 / 18.28px no-repeat;
+				background: url(../img/if/positive-list_o.png) 0 0 / 18.28px no-repeat;
 			}
 		}
 	}
@@ -517,10 +517,10 @@ body {
 				padding: 20px 10px;
 				box-shadow: none;
 				.problem-list__item {
-					background: url(/img/if/problem-list_o.png) 0 3px /13px no-repeat;
+					background: url(../img/if/problem-list_o.png) 0 3px /13px no-repeat;
 				}
 				.positive-list__item {
-					background: url(/img/if/positive-list_o.png) 0 3px /13px no-repeat;
+					background: url(../img/if/positive-list_o.png) 0 3px /13px no-repeat;
 				}
 			}
 		}
@@ -556,10 +556,10 @@ body {
 			&_orange {
 				box-shadow: -5px 5px 5px #c3c0bb;
 				.problem-list__item {
-					background: url(/img/if/problem-list_o.png) 0 0 /13px no-repeat;
+					background: url(../img/if/problem-list_o.png) 0 0 /13px no-repeat;
 				}
 				.positive-list__item {
-					background: url(/img/if/positive-list_o.png) 0 0 /13px no-repeat;
+					background: url(../img/if/positive-list_o.png) 0 0 /13px no-repeat;
 				}
 			}
 		}
@@ -577,7 +577,7 @@ body {
 		color: #272220;
 		padding: 0 0 0 37px;
 		margin: 0 0 20px;
-		background: url(/img/if/problem-list.png) 0 0 /18.28px no-repeat;
+		background: url(../img/if/problem-list.png) 0 0 /18.28px no-repeat;
 	}
 	// .problem-list__text
 	&__text {
@@ -597,7 +597,7 @@ body {
 			line-height: 18px;
 			padding: 0 0 0 17px;
 			margin: 0 0 17px;
-			background: url(/img/if/problem-list.png) 0 3px /13px no-repeat;
+			background: url(../img/if/problem-list.png) 0 3px /13px no-repeat;
 		}
 		&__text {
 			font-size: 20px;
@@ -610,7 +610,7 @@ body {
 		&__item {
 			font-size: 13px;
 			line-height: 15px;
-			background: url(/img/if/problem-list.png) 0 0 /13px no-repeat;
+			background: url(../img/if/problem-list.png) 0 0 /13px no-repeat;
 		}
 		&__text {
 			font-size: 13px;
@@ -629,7 +629,7 @@ body {
 		text-align: justify;
 		color: #272220;
 		padding: 0 0 0 37px;
-		background: url(/img/if/positive-list.png) 0 0 / 18.28px no-repeat;
+		background: url(../img/if/positive-list.png) 0 0 / 18.28px no-repeat;
 	}
 	@media (max-width: $md1+px) {
 		&__item {
@@ -637,14 +637,14 @@ body {
 			line-height: 18px;
 			padding: 0 0 0 17px;
 			margin: 0 0 17px;
-			background: url(/img/if/positive-list.png) 0 3px /13px no-repeat;
+			background: url(../img/if/positive-list.png) 0 3px /13px no-repeat;
 		}
 	}
 	@media (max-width: $md3+px) {
 		&__item {
 			font-size: 13px;
 			line-height: 15px;
-			background: url(/img/if/positive-list.png) 0 0 /13px no-repeat;
+			background: url(../img/if/positive-list.png) 0 0 /13px no-repeat;
 		}
 	}
 }
@@ -900,10 +900,10 @@ body {
 			color: #000000;
 			margin: 0 0 14px;
 			padding: 0 0 0 20px;
-			background: url(/img/packages/tick.png) 0 7px / 14px auto no-repeat;
+			background: url(../img/packages/tick.png) 0 7px / 14px auto no-repeat;
 			ul,
 			li {
-				background: url(/img/packages/Ellipse10.png) 0 10px no-repeat;
+				background: url(../img/packages/Ellipse10.png) 0 10px no-repeat;
 				&:first-of-type {
 					margin: 14px 0;
 				}
@@ -1000,7 +1000,7 @@ body {
 	padding: 45px 0 80px;
 	// .coffee__body
 	&__body {
-		background: url(/img/coffee/1.png) top / 100% auto no-repeat;
+		background: url(../img/coffee/1.png) top / 100% auto no-repeat;
 		padding: 10% 20px 10% 40%;
 	}
 	// .coffee__title
@@ -1026,7 +1026,7 @@ body {
 	@media (max-width: $md1+px) {
 		padding: 30px 0 70px;
 		&__body {
-			background: url(/img/coffee/1.png) center / cover no-repeat;
+			background: url(../img/coffee/1.png) center / cover no-repeat;
 		}
 		&__title {
 			font-size: 40px;
@@ -1356,10 +1356,10 @@ body {
 		padding: 0 0 0 40px;
 	}
 	input[type="text"] {
-		background: url(/img/popup/name.png) 10px no-repeat;
+		background: url(../img/popup/name.png) 10px no-repeat;
 	}
 	input[type="tel"] {
-		background: url(/img/popup/phone.png) 10px no-repeat;
+		background: url(../img/popup/phone.png) 10px no-repeat;
 	}
 	// .popup-call__submit
 	&__submit {
