@@ -287,3 +287,18 @@ function tip() {
 		$(this).toggleClass('active');
 	});
 }
+
+//UP
+$('body').scroll(function () {
+	if ($('body').scrollTop() > 300) {
+		$('#up').addClass('show');
+	} else {
+		$('#up').removeClass('show');
+	}
+});
+
+
+$('#up').click(function (e) {
+	e.preventDefault();
+	$('body, html').animate({ scrollTop: 0 }, '300');
+});

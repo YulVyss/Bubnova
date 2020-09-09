@@ -54,6 +54,7 @@ body {
 
 //<ОБОЛОЧКА>===========================================================================================================
 .wrapper {
+	position: relative;
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
@@ -99,6 +100,7 @@ body {
 @import "header.scss";
 @import "footer.scss";
 @import "home.scss";
+@import "style_packages.scss";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 .link {
 	display: inline-block;
@@ -1316,7 +1318,42 @@ body {
 }
 
 //====================================================================================================
+#up {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	font-size: 50px;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	background-color: #6f7258;
+	border-radius: 100%;
+	transition: background-color 0.3s;
+	border-style: none;
+	box-shadow: 0 0 40px #6f7258;
+	opacity: 0.3;
+	font-size: 40px;
+	z-index: 100;
+}
+#up:hover,
+#up:active,
+#up.show {
+	opacity: 1;
+	background-color: #6f7258;
+}
 
+#up.show {
+	visibility: visible;
+}
+i.fa-chevron-up {
+	color: white;
+	text-align: center;
+}
+
+.fas,
+.fas a {
+	color: #ffffff;
+}
 //====================================================================================================
 
 //====================================================================================================
