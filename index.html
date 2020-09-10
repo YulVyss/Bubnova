@@ -61,7 +61,8 @@
 								в своих родительских силах.</p>
 						</div>
 						<div class="fullscreen_links">
-							<a href="#popup_1" class="fullscreen__link link link_orange pl" data="vid">записаться на КОНСУЛЬТАЦИю</a>
+							<a href="#popup_1" class="fullscreen__link link link_orange popup-link" data="vid">записаться на
+								КОНСУЛЬТАЦИю</a>
 							<a href="#about" class="fullscreen__link link link_braun">ОБО МНЕ</a>
 						</div>
 
@@ -579,26 +580,21 @@
 	</div>
 </footer>	</div>
 <div class="popup " id="popup_1">
-	<div class="popup-table table">
-		<div class="cell">
-			<div class="popup-content">
-				<div class="popup-close">X</div>
-				<div class="popup__title"></div>
-				<div class="popup__txt"></div>
-				<form action="#" class="popup-form form call__popup popup-call">
-					<div class="popup-call__body">
-						<h3 class="popup-call__title">Можете просто оставить заявку, я отвечу Вам в ближайшее время</h3>
-						<p class="form-input"><input type="text" autocomplete="off" class="popup-call__input" placeholder="Ваше имя"
-								name="name" tabindex="1"></p>
-						<p class="form-input"><input type="tel" class="popup-call__input" placeholder="Ваш телефон" name="tel"
-								tabindex="2"></p>
-						<textarea class="popup__textarea" name="text" id="form_text"
-							placeholder="Дополнительная информация"></textarea>
-						<p><button type="submit" class="form__btn btn fw popup-call__submit" tabindex="4">Записаться</button>
-						</p>
-					</div>
-				</form>
-			</div>
+	<div class="popup__body">
+		<div class="popup__content">
+			<i class="fas fa-times-circle close-popup"></i>
+			<div class="popup__close">X</div>
+			<form action="#" class="popup__form form call__popup ">
+				<div class="form__body">
+					<h3 class="form__title">Оставьте заявку,<br> и я отвечу Вам в ближайшее время</h3>
+					<p><input type="text" class="form__input" placeholder="Ваше имя" name="name" tabindex="1"></p>
+					<p><input type="tel" class="form__input" placeholder="Ваш телефон" name="tel" tabindex="2"></p>
+					<p><textarea class="form__textarea" name="text" id="form_text"
+							placeholder="Дополнительная информация"></textarea></p>
+					<p><button type="submit" class="form__submit" tabindex="4">Записаться</button>
+					</p>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>

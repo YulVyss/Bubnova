@@ -41,75 +41,203 @@ CLOUD-ZOOM
 */
 
 
-//POPUP
-$('.pl').click(function (event) {
-	var pl = $(this).attr('href').replace('#', '');
-	var v = $(this).data('vid');
-	popupOpen(pl, v);
-	return false;
-});
-function popupOpen(pl, v) {
-	$('.popup').addClass('active');
-	if (!$('.menu__body').hasClass('active')) {
-		//$('body').data('scroll',$(window).scrollTop());
-	}
-	if (!isMobile.any()) {
-		$('body').css({ paddingRight: $(window).outerWidth() - $('.wrapper').outerWidth() }).addClass('lock');
-		$('.pdb').css({ paddingRight: $(window).outerWidth() - $('.wrapper').outerWidth() });
-	} else {
-		setTimeout(function () {
-			$('body').addClass('lock');
-		}, 300);
-	}
-	history.pushState('', '', '#' + pl);
-	if (v != '' && v != null) {
-		$('.popup-' + pl + ' .popup-video__value').html('<iframe src="https://www.youtube.com/embed/' + v + '?autoplay=1"  allow="autoplay; encrypted-media" allowfullscreen></iframe>');
-	}
-	$('.popup-' + pl).fadeIn(300).delay(300).addClass('active');
+//popup
+const popupLinks = document.querySelectorAll('.popup-link');
+// const body = document.querySelector('body');
+const lockPadding = document.querySelectorAll(".lock-padding");
 
-	if ($('.popup-' + pl).find('.slick-slider').length > 0) {
-		$('.popup-' + pl).find('.slick-slider').slick('setPosition');
+let unlock = true;
+
+const timeout = 800;
+
+if (popupLinks.length > 0) {
+	for (let index = 0; index < popupLinks.length; index++) {
+		const popupLink = popupLinks[index];
+		popupLink.addEventListener("click", function (e) {
+			const popupName = popupLink.getAttribute('href').replace('#', '');
+			const curentPopup = document.getElementById(popupName);
+			console.log(curentPopup, ' 1');
+			popupOpen(curentPopup);
+			e.preventDefault();
+		});
 	}
 }
-function openPopupById(popup_id) {
-	$('#' + popup_id).fadeIn(300).delay(300).addClass('active');
+const popupCloseIcon = document.querySelectorAll('.close-popup, .form__submit');
+if (popupCloseIcon.length > 0) {
+	for (let index = 0; index < popupCloseIcon.length; index++) {
+		const el = popupCloseIcon[index];
+		el.addEventListener('click', function (e) {
+			popupClose(el.closest('.popup'));
+			e.preventDefault();
+		});
+	}
 }
-function popupClose() {
-	$('.popup').removeClass('active').fadeOut(300);
-	if (!$('.menu__body').hasClass('active')) {
-		if (!isMobile.any()) {
-			setTimeout(function () {
-				$('body').css({ paddingRight: 0 });
-				$('.pdb').css({ paddingRight: 0 });
-			}, 200);
-			setTimeout(function () {
-				$('body').removeClass('lock');
-				//$('body,html').scrollTop(parseInt($('body').data('scroll')));
-			}, 200);
+
+function popupOpen(curentPopup) {
+	console.log(curentPopup);
+	if (curentPopup && unlock) {
+		const popupActive = document.querySelector('.popup.open');
+		if (popupActive) {
+			popupClose(popupActive, false);
 		} else {
-			$('body').removeClass('lock');
-			//$('body,html').scrollTop(parseInt($('body').data('scroll')));
+			bodyLock();
+		}
+		curentPopup.classList.add('open');
+		curentPopup.addEventListener("click", function (e) {
+			if (!e.target.closest('.popup__content')) {
+				popupClose(e.target.closest('.popup'));
+			}
+		});
+	}
+}
+
+function popupClose(popupActive, doUnlock = true) {
+	if (unlock) {
+		popupActive.classList.remove('open');
+		if (doUnlock) {
+			bodyUnLock();
 		}
 	}
-	$('.popup-video__value').html('');
-
-	history.pushState('', '', window.location.href.split('#')[0]);
 }
-$('.popup-close,.popup__close').click(function (event) {
-	popupClose();
-	return false;
-});
-$('.popup').click(function (e) {
-	if (!$(e.target).is(".popup>.popup-table>.cell *") || $(e.target).is(".popup-close") || $(e.target).is(".popup__close")) {
-		popupClose();
-		return false;
+
+function bodyLock() {
+	const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+
+	if (lockPadding.length > 0) {
+		for (let index = 0; index < lockPadding.length; index++) {
+			const el = lockPadding[index];
+			el.style.paddingRight = lockPaddingValue;
+		}
+	}
+	body.style.paddingRight = lockPaddingValue;
+	body.classList.add('lock');
+
+	unlock = false;
+	setTimeout(function () {
+		unlock = true;
+	}, timeout);
+}
+
+function bodyUnLock() {
+	setTimeout(function () {
+		if (lockPadding.length > 0) {
+			for (let index = 0; index < lockPadding.length; index++) {
+				const el = lockPadding[index];
+				el.style.paddingRight = '0px';
+			}
+		}
+		body.style.paddingRight = '0px';
+		body.classList.remove('lock');
+	}, timeout);
+
+	unlock = false;
+	setTimeout(function () {
+		unlock = true;
+	}, timeout);
+}
+
+document.addEventListener('keydown', function (e) {
+	if (e.which === 27) {
+		const popupActive = document.querySelector('.popup.open');
+		popupClose(popupActive);
 	}
 });
-$(document).on('keydown', function (e) {
-	if (e.which == 27) {
-		popupClose();
+
+(function () {
+	// проверяем поддержку
+	if (!Element.prototype.closest) {
+		// реализуем
+		Element.prototype.closest = function (css) {
+			var node = this;
+			while (node) {
+				if (node.matches(css)) return node;
+				else node = node.parentElement;
+			}
+			return null;
+		};
 	}
-});
+})();
+(function () {
+	// проверяем поддержку
+	if (!Element.prototype.matches) {
+		// определяем свойство
+		Element.prototype.matches = Element.prototype.matchesSelector ||
+			Element.prototype.webkitMatchesSelector ||
+			Element.prototype.mozMatchesSelector ||
+			Element.prototype.msMatchesSelector;
+	}
+})();
+
+
+//POPUP
+// $('.pl').click(function (event) {
+// 	var pl = $(this).attr('href').replace('#', '');
+// 	var v = $(this).data('vid');
+// 	popupOpen(pl, v);
+// 	return false;
+// });
+// function popupOpen(pl, v) {
+// 	$('.popup').addClass('active');
+// 	if (!$('.menu__body').hasClass('active')) {
+// 		//$('body').data('scroll',$(window).scrollTop());
+// 	}
+// 	if (!isMobile.any()) {
+// 		$('body').css({ paddingRight: $(window).outerWidth() - $('.wrapper').outerWidth() }).addClass('lock');
+// 		$('.pdb').css({ paddingRight: $(window).outerWidth() - $('.wrapper').outerWidth() });
+// 	} else {
+// 		setTimeout(function () {
+// 			$('body').addClass('lock');
+// 		}, 300);
+// 	}
+// 	history.pushState('', '', '#' + pl);
+// 	if (v != '' && v != null) {
+// 		$('.popup-' + pl + ' .popup-video__value').html('<iframe src="https://www.youtube.com/embed/' + v + '?autoplay=1"  allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+// 	}
+// 	$('.popup-' + pl).fadeIn(300).delay(300).addClass('active');
+
+// 	if ($('.popup-' + pl).find('.slick-slider').length > 0) {
+// 		$('.popup-' + pl).find('.slick-slider').slick('setPosition');
+// 	}
+// }
+// function openPopupById(popup_id) {
+// 	$('#' + popup_id).fadeIn(300).delay(300).addClass('active');
+// }
+// function popupClose() {
+// 	$('.popup').removeClass('active').fadeOut(300);
+// 	if (!$('.menu__body').hasClass('active')) {
+// 		if (!isMobile.any()) {
+// 			setTimeout(function () {
+// 				$('body').css({ paddingRight: 0 });
+// 				$('.pdb').css({ paddingRight: 0 });
+// 			}, 200);
+// 			setTimeout(function () {
+// 				$('body').removeClass('lock');
+// 				//$('body,html').scrollTop(parseInt($('body').data('scroll')));
+// 			}, 200);
+// 		} else {
+// 			$('body').removeClass('lock');
+// 			//$('body,html').scrollTop(parseInt($('body').data('scroll')));
+// 		}
+// 	}
+// 	$('.popup-video__value').html('');
+
+// 	history.pushState('', '', window.location.href.split('#')[0]);
+// }
+// $('.popup-close,.popup__close').click(function (event) {
+// 	popupClose();
+// 	return false;
+// });
+// $('.popup').click(function (e) {
+// 	if (!$(e.target).is(".popup>.popup-table>.cell *") || $(e.target).is(".popup-close") || $(e.target).is(".popup__close")) {
+// 		popupClose();
+// 		return false;
+// 	}
+// });
+// $(document).on('keydown', function (e) {
+// 	if (e.which == 27) {
+// 		popupClose();
+// 	}
+// });
 
 $('.goto').click(function () {
 	var el = $(this).attr('href').replace('#', '');

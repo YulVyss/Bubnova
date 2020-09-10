@@ -1,5 +1,6 @@
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .first-screen {
+  font-family: $fontfamilyAdd;
   background: #f9f1e4;
   display: flex;
   align-items: center;
@@ -24,7 +25,6 @@
   }
   // .first-screen__title
   &__title {
-    font-family: $fontfamilyAdd;
     font-weight: bold;
     font-size: 33px;
     letter-spacing: -0.015em;
@@ -34,7 +34,6 @@
 
   // .first-screen__subtitle
   &__subtitle {
-    font-family: $fontfamilyAdd;
     font-size: 30px;
     line-height: 34px;
     letter-spacing: -0.015em;
@@ -44,6 +43,13 @@
     p {
       margin: 0 0 20px;
     }
+  }
+  &__add {
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: -0.015em;
+    color: #3a302c;
+    margin: -15px 0 20px;
   }
   &__list {
     margin: 20px 0 25px;
@@ -58,6 +64,18 @@
         margin: 0;
       }
     }
+    p {
+      font-size: 18px;
+      line-height: 28px;
+      text-align: center;
+      margin: -20px 0 0;
+    }
+  }
+  &__list_s {
+    li {
+      background: url(../img/packages/Ellipse10.png) 0 10px no-repeat;
+      margin: 10px 0 0;
+    }
   }
 
   // .first-screen__image
@@ -65,6 +83,12 @@
     flex: 1 0 46%;
     padding: 0 0 50%;
     z-index: 2;
+  }
+  &__image_2 {
+    padding: 0 0 58%;
+  }
+  &__image_3 {
+    padding: 0 0 86%;
   }
   &_links {
     @include flexbox;
@@ -99,6 +123,11 @@
       font-size: 18px;
       margin: 0 0 5px;
     }
+    &__add {
+      font-size: 18px;
+      line-height: 32px;
+      margin: -5px 0 10px;
+    }
     &__list {
       margin: 0 0 12px;
       li {
@@ -128,8 +157,8 @@
       padding: 0 0 0 0;
     }
     &__title {
-      font-size: 24px;
-      line-height: 28px;
+      font-size: 20px;
+      line-height: 30px;
       margin: 0 0 10px;
       text-align: center;
     }
@@ -137,6 +166,12 @@
       font-size: 13px;
       line-height: 18px;
       margin: 0 0 10px;
+      text-align: center;
+    }
+    &__add {
+      font-size: 13px;
+      line-height: 18px;
+      margin: -5px 0 10px;
       text-align: center;
     }
     &__body {
@@ -224,25 +259,32 @@
   }
   // .footer__text
   &__text {
-    font-family: $fontfamilyAdd;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 32px;
-    text-align: justify;
-    text-transform: uppercase;
-    color: #000000;
+    p {
+      font-family: $fontfamilyAdd;
+      font-style: normal;
+      font-size: 22px;
+      line-height: 32px;
+      text-align: justify;
+      text-transform: uppercase;
+      color: #000000;
+      margin: 0 0 20px;
+    }
   }
   @media (max-width: $md1+px) {
     &__text {
-      font-size: 18px;
-      line-height: 22px;
+      p {
+        font-size: 18px;
+        line-height: 22px;
+      }
     }
   }
   @media (max-width: $md3+px) {
     &__text {
-      font-size: 13px;
-      line-height: 17px;
+      p {
+        font-size: 13px;
+        line-height: 17px;
+        margin: 0 0 10px;
+      }
     }
   }
 }
