@@ -720,6 +720,9 @@ body.ie .ibg img {
 	display: -ms-flexbox;
 	display: flex;
 	font-size: 0;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
 }
 .slick-slider .slick-slide {
 	position: relative;

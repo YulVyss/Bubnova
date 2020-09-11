@@ -197,6 +197,7 @@ body.ie {
 		background: #f9f1e4;
 		width: 100%;
 		@include flexbox();
+		align-items: flex-start;
 	}
 	.slick-slide {
 		position: relative;
