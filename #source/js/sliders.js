@@ -1,11 +1,10 @@
 //SLIDERS
 if ($('.mainslider').length > 0) {
 	$('.mainslider').slick({
-		//autoplay: true,
 		//infinite: false,
 		dots: true,
 		arrows: true,
-		accessibility: false,
+		accessibility: true,
 		slidesToShow: 1,
 		autoplaySpeed: 3000,
 		easing: 'ease',
@@ -15,6 +14,7 @@ if ($('.mainslider').length > 0) {
 		pauseOnFocus: true,
 		draggable: true, //перетаскивание на десктопе
 		swipe: true, //перетаскивание на мобильном
+		adaptiveHeight: true,
 		//asNavFor:'',
 		//appendDots:
 		//appendArrows:$('.mainslider-arrows .container'),

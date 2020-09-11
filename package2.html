@@ -16,20 +16,21 @@
 
 <body>
   <div class="wrapper">
-<header class="header">
-  <div class="container">
-    <div class="header__row">
-      <div class="header__menu menu menu_p">
-        <nav class="menu__body_p">
-          <ul class="menu__list_p">
-            <li><a href="/" class="menu__link_p">на ГЛАВНую</a></li>
-          </ul>
-        </nav>
+    <header class="header">
+      <div class="container">
+        <div class="header__row">
+          <div class="header__menu menu menu_p">
+            <nav class="menu__body_p">
+              <ul class="menu__list_p">
+                <li><a href="/" class="menu__link_p">на ГЛАВНую</a></li>
+              </ul>
+            </nav>
+          </div>
+          <a href="https://wa.me/+79002945131" class="header__phone">+7 (900) 294-51-31</a>
+        </div>
       </div>
-      <a href="https://wa.me/+79002945131" class="header__phone">+7 (900) 294-51-31</a>
-    </div>
-  </div>
-</header>    <section class="first-screen">
+    </header>
+    <section class="first-screen">
       <div class="container">
         <div class="first-screen__body">
           <div class="first-screen__image first-screen__image_2 ibg"><img src="./img/1/1.jpg" alt="photo"></div>
@@ -48,7 +49,7 @@
                 мотивации ребенка к занятиям.</li>
             </ul>
             <div class="first-screen_links">
-              <a href="#popup_1" class="first-screen__link link link_orange pl" data="vid">записаться на
+              <a href="#popup_1" class="first-screen__link link link_orange popup-link" data="vid">записаться на
                 КОНСУЛЬТАЦИю</a>
             </div>
           </div>
@@ -60,7 +61,7 @@
         <div class="description__body">
           <h2 class="description__title">Как выстроена программа по запуску речи?</h2>
           <ol class="description__list">
-            <li>Вы оставляете заявку на WhatsApp по тел.: +7 (989) 752-20-64 с кратким описанием запроса.</li>
+            <li>Вы оставляете заявку на WhatsApp по тел.: +7 (900) 294-51-31 с кратким описанием запроса.</li>
             <li>В течении 2-х дней Вы получаете от меня обратную связь, будет ли программа результативна для вашего
               ребенка (имеются противопоказания, см. ниже). При положительном ответе я высылаю Вам ссылку на первичную
               анкету. Мы договариваемся о дате и времени проведения первой онлайн консультации.
@@ -119,81 +120,85 @@
     <span>
       <i class="fas fa-chevron-up text-center" id="up"></i>
     </span>
-<footer>
-	<div class="footer-p">
-		<div class='container'>
-			<div class="footer-p__row">
-				<div class="footer-p__links">
-					<h3 class="menu-footer-p__title">Соц. сети:</h3>
-					<ul>
-						<li class="footer-p__link"><a href="#" class="footer-p__ins"></a></li>
-						<li class="footer-p__link"><a href="" class="footer-p__wa"></a></li>
-					</ul>
-				</div>
-				<nav class="footer-p__menu menu-footer-p">
-					<a href="/" class="menu-footer-p__title">Главная</a>
-					<ul class="footer-p__list">
-						<li><a href="/#request" class="menu-footer-p__link">ЗАПРОСЫ</a></li>
-						<li><a href="/#about" class="menu-footer-p__link">ОБО МНЕ</a></li>
-						<li><a href="/#packages" class="menu-footer-p__link">ПАКЕТЫ УСЛУГ</a></li>
-						<li><a href="/#reviews" class="menu-footer-p__link">ОТЗЫВЫ</a></li>
-						<li><a href="/#answers" class="menu-footer-p__link">ОТВЕТЫ НА ВОПРОСЫ</a></li>
-					</ul>
-				</nav>
-				<nav class="footer-p__menu menu-footer">
-					<h3 class="menu-footer-p__title">Услуги:</h3>
-					<ul class="footer-p__list">
-						<li><a href="/package1.html" class="menu-footer-p__link">ОНЛАЙН КОНСУЛЬТАЦИЯ</a></li>
-						<li><a href="/package2.html" class="menu-footer-p__link">ПРОГРАММА ПО ЗАПУСКУ РЕЧИ “МОЙ РЕБЕНОК ГОВОРИТ”</a>
-						</li>
-						<li><a href="/package3.html" class="menu-footer-p__link">МЕСЯЧНОЕ СОПРОВОЖДЕНИЕ </a></li>
-					</ul>
-				</nav>
-				<div class="footer-p__contacts">
-					<h3 class="menu-footer-p__title">Контакты:</h3>
-					<ul class="footer-p__list">
-						<li><a href="https://wa.me/+79002945131" class="menu-footer-p__link">+7 (900) 294-51-31</a></li>
-						<li><a href="mail:Bubnova_psychology@mail.com" class="menu-footer-p__link">Bubnova_psychology@mail.com</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class=" footer-p__text"><a href="/">Политика конфиденциальности</a>
-			</div>
-		</div>
-	</div>
-</footer>  </div>
-<div class="popup " id="popup_1">
-	<div class="popup__body">
-		<div class="popup__content">
-			<i class="fas fa-times-circle close-popup"></i>
-			<div class="popup__close">X</div>
-			<form action="#" class="popup__form form call__popup ">
-				<div class="form__body">
-					<h3 class="form__title">Оставьте заявку,<br> и я отвечу Вам в ближайшее время</h3>
-					<p><input type="text" class="form__input" placeholder="Ваше имя" name="name" tabindex="1"></p>
-					<p><input type="tel" class="form__input" placeholder="Ваш телефон" name="tel" tabindex="2"></p>
-					<p><textarea class="form__textarea" name="text" id="form_text"
-							placeholder="Дополнительная информация"></textarea></p>
-					<p><button type="submit" class="form__submit" tabindex="4">Записаться</button>
-					</p>
-				</div>
-			</form>
-		</div>
-	</div>
-</div>
-<!-- <div class="popup popup-video">
+    <footer>
+      <div class="footer-p">
+        <div class='container'>
+          <div class="footer-p__row">
+            <div class="footer-p__links">
+              <h3 class="menu-footer-p__title">Соц. сети:</h3>
+              <ul>
+                <li class="footer-p__link"><a href="#" class="footer-p__ins"></a></li>
+                <li class="footer-p__link"><a href="" class="footer-p__wa"></a></li>
+              </ul>
+            </div>
+            <nav class="footer-p__menu menu-footer-p">
+              <a href="/" class="menu-footer-p__title">Главная</a>
+              <ul class="footer-p__list">
+                <li><a href="/#request" class="menu-footer-p__link">ЗАПРОСЫ</a></li>
+                <li><a href="/#about" class="menu-footer-p__link">ОБО МНЕ</a></li>
+                <li><a href="/#packages" class="menu-footer-p__link">ПАКЕТЫ УСЛУГ</a></li>
+                <li><a href="/#reviews" class="menu-footer-p__link">ОТЗЫВЫ</a></li>
+                <li><a href="/#answers" class="menu-footer-p__link">ОТВЕТЫ НА ВОПРОСЫ</a></li>
+              </ul>
+            </nav>
+            <nav class="footer-p__menu menu-footer">
+              <h3 class="menu-footer-p__title">Услуги:</h3>
+              <ul class="footer-p__list">
+                <li><a href="/package1.html" class="menu-footer-p__link">ОНЛАЙН КОНСУЛЬТАЦИЯ</a></li>
+                <li><a href="/package2.html" class="menu-footer-p__link">ПРОГРАММА ПО ЗАПУСКУ РЕЧИ “МОЙ РЕБЕНОК
+                    ГОВОРИТ”</a>
+                </li>
+                <li><a href="/package3.html" class="menu-footer-p__link">МЕСЯЧНОЕ СОПРОВОЖДЕНИЕ </a></li>
+              </ul>
+            </nav>
+            <div class="footer-p__contacts">
+              <h3 class="menu-footer-p__title">Контакты:</h3>
+              <ul class="footer-p__list">
+                <li><a href="https://wa.me/+79002945131" class="menu-footer-p__link">+7 (900) 294-51-31</a></li>
+                <li><a href="mail:Bubnova_psychology@mail.com"
+                    class="menu-footer-p__link">Bubnova_psychology@mail.com</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class=" footer-p__text"><a href="/">Политика конфиденциальности</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div class="popup " id="popup_1">
+    <div class="popup__body">
+      <div class="popup__content">
+        <i class="fas fa-times-circle close-popup"></i>
+        <div class="popup__close">X</div>
+        <form action="#" method="post" class="popup__form form call__popup ">
+          <div class="form__body">
+            <h3 class="form__title">Оставьте заявку,<br> и я отвечу Вам в ближайшее время</h3>
+            <p><input type="text" class="form__input" placeholder="Ваше имя" name="name" tabindex="1"></p>
+            <p><input type="tel" class="form__input" placeholder="Ваш телефон" name="tel" tabindex="2"></p>
+            <p><textarea class="form__textarea" name="text" id="form_text"
+                placeholder="Дополнительная информация"></textarea></p>
+            <p><button type="submit" class="form__submit" tabindex="4">Записаться</button>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="popup popup-video">
 	<div class="popup-table table">
 		<div class="cell">
 			<div class="popup-close"></div>
 			<div class="popup-video__value video"></div>
 		</div>
 	</div>
-</div> --><script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script> -->
-<script src="js/vendors.js"></script>
-<script src="js/main.js"></script>
-<script src="js/custom.js" ></script>
+</div> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script> -->
+  <script src="js/vendors.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/custom.js"></script>
 </body>
 
 </html>

@@ -430,3 +430,17 @@ $('#up').click(function (e) {
 	e.preventDefault();
 	$('body, html').animate({ scrollTop: 0 }, '300');
 });
+
+// Send form
+$("form").submit(function (e) {
+	e.preventDefault();
+	$.ajax({
+		type: "POST",
+		url: "/php/mail.php",
+		data: $("form").serialize(),
+		success: function (data) {
+			$("form").html(data);
+		}
+	});
+	popupClose(e.target.closest('.popup'));
+});

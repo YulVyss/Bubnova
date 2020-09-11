@@ -858,6 +858,10 @@ body {
 	}
 }
 
+.line-through {
+	text-decoration: line-through;
+}
+
 .package {
 	flex: 1 0 31.33%;
 	font-family: $fontfamilyAdd;
@@ -1134,6 +1138,7 @@ body {
 		align-items: center;
 		background: #8f9471;
 		margin: 0 auto;
+		padding: 20px 0;
 	}
 	// .review__image
 	&__image {
@@ -1158,11 +1163,15 @@ body {
 	@media (max-width: $md3+px) {
 		&__body {
 			flex-direction: column;
+			padding: 10px 0;
 		}
 		&__title {
 			font-size: 18px;
 			line-height: 21px;
 			letter-spacing: 0.045em;
+		}
+		&__text {
+			margin: 10px 0 0;
 		}
 	}
 }
