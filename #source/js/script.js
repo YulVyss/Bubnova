@@ -16,16 +16,31 @@ if (isMobile.iOS()) {
 	var act = "touchstart";
 }
 
-let iconMenu = document.querySelector(".icon-menu");
+let div = $('.icon-menu, .menu__body');
+
 let body = document.querySelector("body");
-let menuBody = document.querySelector(".menu__body");
-if (iconMenu) {
-	iconMenu.addEventListener("click", function () {
-		iconMenu.classList.toggle("active");
-		body.classList.toggle("lock");
-		menuBody.classList.toggle("active");
-	});
-}
+
+div.click(function () {
+	div.toggleClass('active');
+	// menu.slideToggle(600);
+	body.classList.toggle("lock");
+});
+
+// let iconMenu = document.querySelector(".icon-menu");
+// let body = document.querySelector("body");
+// let menuBody = document.querySelector(".menu__body");
+// if (iconMenu) {
+// 	iconMenu.addEventListener("click", function () {
+// 		iconMenu.classList.toggle("active");
+// 		body.classList.toggle("lock");
+// 		menuBody.classList.toggle("active");
+// 	});
+// 	menuBody.addEventListener("click", function () {
+// 		iconMenu.classList.toggle("active");
+// 		body.classList.toggle("lock");
+// 		menuBody.classList.toggle("active");
+// 	});
+// }
 
 //ZOOM
 if ($('.gallery').length > 0) {
@@ -432,15 +447,31 @@ $('#up').click(function (e) {
 });
 
 // Send form
-$("form").submit(function (e) {
+
+
+$(".form_f").submit(function (e) {
 	e.preventDefault();
 	$.ajax({
 		type: "POST",
-		url: "/php/mail.php",
-		data: $("form").serialize(),
+		url: "../php/mail.php",
+		data: $(".form_f").serialize(),
 		success: function (data) {
-			$("form").html(data);
+
+			$(".result").html('сообщение успешно отправлено');
 		}
 	});
-	popupClose(e.target.closest('.popup'));
+	// popupClose(e.target.closest('.popup'));
 });
+
+// $(".form_p").submit(function (e) {
+// 	e.preventDefault();
+// 	$.ajax({
+// 		type: "POST",
+// 		url: "../php/mail.php",
+// 		data: $(".form_p").serialize(),
+// 		success: function (data) {
+// 			$(".result").html('сообщение успешно отправлено');
+// 		}
+// 	});
+// 	popupClose(e.target.closest('.popup'));
+// });

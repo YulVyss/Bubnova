@@ -3088,8 +3088,14 @@ body.ie .ibg img {
 		line-height: 21px;
 		letter-spacing: 0.045em;
 	}
+	.review__image img {
+		width: 100%;
+	}
 	.review__text {
 		margin: 10px 0 0;
+	}
+	.review__text img {
+		width: 100%;
 	}
 }
 
@@ -3287,4 +3293,10 @@ i.fa-chevron-up {
 .fas,
 .fas a {
 	color: #ffffff;
+}
+
+.result {
+	font-size: 16px;
+	color: #000;
+	margin: 0 0 10px;
 }

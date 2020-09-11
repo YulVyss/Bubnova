@@ -1,32 +1,34 @@
 
 <?php
-$name = $_POST['name'];
-$email = $_POST['email'];
-$text = $_POST['text'];
-$tel = $_POST['tel'];
-$name = htmlspecialchars($name);
-$text = htmlspecialchars($text);
-$tel = htmlspecialchars($tel);
-$name = urldecode($name);
-// $text = urldecode($text);
-// $tel = urldecode($tel);
-$name = trim($name);
-$text = trim($text);
-$tel = trim($tel);
-//echo $fio;
-//echo "<br>";
-//echo $email;
-// if(!empty($_POST['ButtonSend'])) {
-//     if (mail("admin@xn--b1ali0a3coj.xn--p1ai", "Заявка с сайта", "Имя: ".$name.". E-mail: ".$email.". Тел.: " .$tel.". Сообщение: ".$text,"From: admin@xn--b1ali0a3coj.xn--p1ai \r\n"))
-//     {     echo "сообщение успешно отправлено";
-//     } else {
-//         echo "при отправке сообщения возникли ошибки";
-//     }
-// }
-$message =  "Имя: ".$name.". Тел.: ".$tel.". Сообщение: ".$text;
+$result;
+// $nameP = $_POST['nameP'];
+// $email = $_POST['email'];
+// $textP = $_POST['textP'];
+// $telP = $_POST['telP'];
+// $nameP = htmlspecialchars($nameP);
+// $textP = htmlspecialchars($textP);
+// $telP = htmlspecialchars($telP);
+// $nameP = urldecode($nameP);
+// $nameP = trim($nameP);
+// $textP = trim($textP);
+// $telP = trim($telP);
 
-if(mail("admin@xn--b1ali0a3coj.xn--p1ai", "Заявка с сайта", $message,"From: admin@xn--b1ali0a3coj.xn--p1ai \r\n"))
-    {     echo "сообщение успешно отправлено";
-    } else {
-        echo "при отправке сообщения возникли ошибки";
-    }
+// $messageP =  "Имя: ".$nameP.". Тел.: ".$telP.". Сообщение: ".$textP;
+
+// if(mail("admin@bubnova-psy.ru", "Заявка с сайта", $messageP,"From: admin@bubnova-psy.ru \r\n")){
+//     $response = "сообщение успешно отправлено";
+// }
+
+$nameF = $_POST['nameF'];
+$telF = $_POST['telF'];
+$nameF = htmlspecialchars($nameF);
+$telF = htmlspecialchars($telF);
+$nameF = urldecode($nameF);
+$nameF = trim($nameF);
+$telF = trim($telF);
+
+$messageF =  "Имя: ".$nameF.". Тел.: ".$telF;
+
+if(mail("admin@bubnova-psy.ru", "Заявка с сайта", $messageF,"From: admin@bubnova-psy.ru \r\n")){
+    $response = "сообщение успешно отправлено";
+}
