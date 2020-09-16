@@ -447,31 +447,33 @@ $('#up').click(function (e) {
 });
 
 // Send form
+// if ($('.popup-call__input').val().length == 0) {
+// 	$('.popup-call__input').addClass('error');
+// } else {
+// 	$('.popup-call__input').removeClass('.error');
+// };
 
-
-$(".form_f").submit(function (e) {
+$(".form").submit(function (e) {
 	e.preventDefault();
-	$.ajax({
-		type: "POST",
-		url: "../php/mail.php",
-		data: $(".form_f").serialize(),
-		success: function (data) {
+	if ($('.input__text').val().length == 0) {
+		$('.input__text').addClass('error');
+	} else if ($('.input__tel').val().length == 0) {
+		$('.input__tel').addClass('error');
+	} else {
+		$('.input__text').removeClass('.error');
+		$('.input__tel').removeClass('.error');
 
-			$(".result").html('сообщение успешно отправлено');
-		}
-	});
+		$.ajax({
+			type: "POST",
+			url: "../php/mail.php",
+			data: $(".form").serialize(),
+			success: function (data) {
+				$("result").html('Сообщение успешно отправлено!');
+				$('.input__tel').val('');
+				$('.input__text').val('');
+			}
+		});
+	}
 	// popupClose(e.target.closest('.popup'));
 });
 
-// $(".form_p").submit(function (e) {
-// 	e.preventDefault();
-// 	$.ajax({
-// 		type: "POST",
-// 		url: "../php/mail.php",
-// 		data: $(".form_p").serialize(),
-// 		success: function (data) {
-// 			$(".result").html('сообщение успешно отправлено');
-// 		}
-// 	});
-// 	popupClose(e.target.closest('.popup'));
-// });

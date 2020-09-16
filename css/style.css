@@ -3066,6 +3066,9 @@ body.ie .ibg img {
 .review__image {
 	max-height: 100%;
 }
+.review__text img {
+	max-height: 100%;
+}
 @media (max-width: 991px) {
 	.review__body {
 		max-width: 90%;
@@ -3095,7 +3098,7 @@ body.ie .ibg img {
 		margin: 10px 0 0;
 	}
 	.review__text img {
-		width: 100%;
+		max-width: 100%;
 	}
 }
 
@@ -3299,4 +3302,8 @@ i.fa-chevron-up {
 	font-size: 16px;
 	color: #000;
 	margin: 0 0 10px;
+}
+
+.error {
+	border: 2px dotted #ff001c;
 }
